@@ -27,5 +27,6 @@ pip install -r requirements.txt
 
 ### Step 3: Start Django Server
 ```bash
+python manage.py migrate
 python manage.py runserver # starts Django Server
 ```
