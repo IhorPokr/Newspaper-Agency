@@ -17,21 +17,20 @@ from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-load_dotenv()
+# load_dotenv()
 
 
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+# SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY = "django-insecure-^x6lqjr*=scsp3tz!8)#i&#w*bjiz$^9zt3(f*=@a9xcv==#+@"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -75,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "newspaper_agency.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -85,7 +83,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -117,7 +114,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
