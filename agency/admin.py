@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from agency.models import Redactor, Topic, Newspaper
+
+admin.site.register(Redactor)
+admin.site.register(Topic)
+admin.site.register(Newspaper)
