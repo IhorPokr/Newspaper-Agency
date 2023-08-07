@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Newspaper List</h1>
+
+  {% if newspaper_list %}
+      <ul>
+        {% for newspaper in newspaper_list %}
+          <li>
+            <a href="{% url 'agency:newspaper-detail' pk=newspaper.id%}">{{ newspaper.title }}</a>
+            (publisher date: {{ newspaper.publisher_date }}, topic: {{ newspaper.topic.name }})
+          </li>
+        {% endfor %}
+        
+      </ul>
+    {% else %}
+      <p>There are no newspapers in library</p>
+  {% endif %} 
+{% endblock %}
