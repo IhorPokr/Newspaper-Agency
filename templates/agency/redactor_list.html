@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Redactors List</h1>
+  <ul>
+  {% for redactor in redactor_list %}
+    <li>{{ redactor_list.username }}</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
