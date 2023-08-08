@@ -9,10 +9,10 @@
   <div class="ml-3">
     <h3>Redactors</h3>
 
-    {% for publisher in newspaper.publishers.all %}
+    {% for redactor in newspaper.publishers.all %}
       <hr>
-      <p class="text-muted"><strong>Id:</strong> {{ publisher.id }}</p>
-      <p><strong>Full name:</strong> {{ publisher.first_name }} {{ publisher.last_name }}</p>
+      <p class="text-muted"><strong>Id:</strong> {{ redactor.id }}</p>
+      <p><strong>Full name:</strong> {{ redactor.first_name }} {{ redactor.last_name }}</p>
     {% endfor %}
     
 
