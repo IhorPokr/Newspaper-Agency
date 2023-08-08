@@ -20,14 +20,17 @@ def index(request):
 
 class RedactorListView(generic.ListView):
     model = Redactor
+    paginate_by = 10
 
 
 class NewspaperListView(generic.ListView):
     model = Newspaper
+    paginate_by = 10
 
 
 class TopicListView(generic.ListView):
     model = Topic
+    paginate_by = 5
 
 
 class NewspaperDetailView(generic.DetailView):
