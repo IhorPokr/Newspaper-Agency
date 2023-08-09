@@ -4,7 +4,7 @@
   <h1>Redactors List</h1>
   <ul>
   {% for redactor in redactor_list %}
-    <li>{{ redactor.username }}</li>
+    <li>{{ redactor.first_name }} {{ redactor.last_name }}</li>
   {% endfor %}
   </ul>
 {% endblock %}
