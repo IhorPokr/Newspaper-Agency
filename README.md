@@ -30,3 +30,9 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver # starts Django Server
 ```
+
+### Step 4: Login
+```
+username: admin_user
+password: xde123qw
+```
