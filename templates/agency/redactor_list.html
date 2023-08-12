@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Redactors List</h1>
+  <h1>
+    Redactors List
+    <a style="float: right" href="{% url 'agency:redactor-list-create' %}">+</a>
+  </h1>
   <ul>
   {% for redactor in redactor_list %}
     <li>{{ redactor.first_name }} {{ redactor.last_name }}</li>
