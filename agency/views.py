@@ -37,6 +37,18 @@ class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
     success_url = reverse_lazy("agency:redactor-list")
 
 
+class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Redactor
+    fields = "__all__"
+    success_url = reverse_lazy("agency:redactor-list")
+
+
+class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Redactor
+    template_name = "agency/redactor_confirm_delete.html"
+    success_url = reverse_lazy("agency:redactor-list")
+
+
 class NewspaperListView(LoginRequiredMixin, generic.ListView):
     model = Newspaper
     paginate_by = 10
