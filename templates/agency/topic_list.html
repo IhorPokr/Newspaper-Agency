@@ -1,11 +1,39 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Topic List</h1>
-  {% for topic in topic_list %}
-    <li>
-      {{ topic.name }}
-    </li>
-  {% endfor %}
+  <h1>
+    Topic List
+    <a style="float: right" href="{% url 'agency:topic-list-create' %}">+</a>
+  </h1>
+  {% if topic_list %}
+  
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
 
+      {% for topic in topic_list %}
+        <tr>
+          <td>
+            {{ topic.id }}
+          </td>
+          <td>
+            {{ topic.name }}
+          </td>
+          <td>
+            <a href="{% url 'agency:topic-list-update' pk=topic.id %}">UPDATE</a>
+          </td>
+          <td>
+            <a href="{% url 'agency:topic-list-delete' pk=topic.id%}">DELETE</a>
+          </td>
+        </tr>
+      {% endfor %}
+
+    </table>
+    {% else %}
+      <p>The are no Redactors in Agency</p>
+  {% endif %}
 {% endblock %}
