@@ -54,9 +54,27 @@ class NewspaperListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 10
 
 
+class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Newspaper
+
+
 class TopicListView(LoginRequiredMixin, generic.ListView):
     model = Topic
 
 
-class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
-    model = Newspaper
+class TopicCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("agency:topic-list")
+
+
+class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("agency:topic-list")
+
+
+class TopicDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Topic
+    template_name = "agency/topic_confirm_delete.html"
+    success_url = reverse_lazy("agency:topic-list")
