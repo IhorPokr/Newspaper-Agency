@@ -9,7 +9,8 @@
     <table class="table">
       <tr>
         <th>ID</th>
-        <th>Name</th>
+        <th>First name</th>
+        <th>Last name</th>
         <th>Update</th>
         <th>Delete</th>
       </tr>
@@ -21,6 +22,9 @@
           </td>
           <td>
             {{ redactor.first_name }}
+          </td>
+          <td>
+            {{ redactor.last_name }}
           </td>
           <td>
             <a href="{% url 'agency:redactor-list-update' pk=redactor.id %}">UPDATE</a>
