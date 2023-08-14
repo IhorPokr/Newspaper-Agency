@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Newspaper List</h1>
+  <h1>
+    Newspaper List
+    <a style="float: right" href="{% url 'agency:newspaper-list-create' %}">+</a>
+  </h1>
 
   {% if newspaper_list %}
       <ul>
