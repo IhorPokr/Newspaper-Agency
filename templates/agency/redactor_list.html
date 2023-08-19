@@ -3,7 +3,7 @@
 {% block content %}
   <h1>
     Redactors List
-    <a style="float: right" href="{% url 'agency:redactor-list-create' %}">+</a>
+    <a style="float: right" class="btn btn-primary" href="{% url 'agency:redactor-list-create' %}">+</a>
   </h1>
   {% if redactor_list %}
     <table class="table">
@@ -11,6 +11,7 @@
         <th>ID</th>
         <th>First name</th>
         <th>Last name</th>
+        <th>Experience</th>
         <th>Update</th>
         <th>Delete</th>
       </tr>
@@ -25,6 +26,9 @@
           </td>
           <td>
             {{ redactor.last_name }}
+          </td>
+          <td>
+            {{ redactor.years_of_experience }}
           </td>
           <td>
             <a href="{% url 'agency:redactor-list-update' pk=redactor.id %}">UPDATE</a>
