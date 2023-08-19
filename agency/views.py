@@ -90,6 +90,7 @@ class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
 class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Newspaper
     form_class = NewspaperForm
+    success_url = reverse_lazy("agency:newspaper-list")
 
 
 class TopicListView(LoginRequiredMixin, generic.ListView):
