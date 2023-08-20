@@ -16,7 +16,7 @@ class RedactorCreationForm(UserCreationForm):
 
 
 class NewspaperForm(forms.ModelForm):
-    redactors = forms.ModelMultipleChoiceField(
+    publishers = forms.ModelMultipleChoiceField(
         queryset=get_user_model().objects.all(),
         widget=forms.CheckboxSelectMultiple,
         required=True
