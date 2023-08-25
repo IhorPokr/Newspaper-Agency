@@ -30,13 +30,6 @@ The .env file is used to store environment variables for your application. These
 information like API keys, database credentials, and other configuration settings. To ensure security and separation 
 of sensitive data from your codebase, you should never commit the .env file to version control.
 
-#### Import and Initialise python-dotenv in settings.py
-```bash
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-```
 
 #### Create a .env file at the root of the Project
 ```bash
@@ -48,11 +41,6 @@ load_dotenv()
 #### Set Environment Variable in .env file
 ```bash
 SECRET_KEY=<your_secret_key>
-```
-
-#### Assign the Environment Variable in the settings.py
-```bash
-SECRET_KEY = os.environ.get('SECRET_KEY') #here
 ```
 
 #### Add the .env file to .gitignore file
