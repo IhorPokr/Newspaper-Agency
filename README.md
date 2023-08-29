@@ -43,8 +43,6 @@ of sensitive data from your codebase, you should never commit the .env file to v
 SECRET_KEY=<your_secret_key>
 ```
 
-#### Add the .env file to .gitignore file
-
 
 ### Step 4: Start Django Server
 
