@@ -48,6 +48,7 @@ SECRET_KEY=<your_secret_key>
 
 ```bash
 python manage.py migrate
+python manage.py loaddata fixture_data.json # loads data
 python manage.py runserver # starts Django Server
 ```
 
