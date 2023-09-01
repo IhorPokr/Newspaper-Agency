@@ -14,9 +14,11 @@ from agency.views import (
     TopicCreateView,
     TopicUpdateView,
     TopicDeleteView,
+    MyApiView
 )
 
 urlpatterns = [
+    path('api/', MyApiView.as_view(), name='my-api'),
     path("", index, name="index"),
     path(
         "redactors/",

@@ -3,6 +3,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 from agency.forms import RedactorCreationForm, NewspaperForm, NewspaperSearchForm
 from agency.models import Newspaper, Redactor, Topic
@@ -114,3 +116,9 @@ class TopicDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Topic
     template_name = "agency/topic_confirm_delete.html"
     success_url = reverse_lazy("agency:topic-list")
+
+
+class MyApiView(APIView):
+    def get(self, request):
+        data = {"message": "Hello, API!"}
+        return Response(data)
